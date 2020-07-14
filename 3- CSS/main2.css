@@ -1,0 +1,12 @@
+body{
+    background-color: #eee;
+}
+p{
+    color: black;
+    font-family: Calibri;
+    font-weight: 600;
+    text-align: justify;
+}
+a{
+    text-decoration: none;
+}

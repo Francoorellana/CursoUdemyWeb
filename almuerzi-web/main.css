@@ -1,0 +1,39 @@
+body{
+    background-color: #eee;
+    display: flex;
+}
+body div{
+    flex-grow: 1;
+    background-color: aliceblue;
+    margin: 5px;
+    margin-top: 0px;
+    border-radius: 15px;
+}
+body div:first-child {
+    margin-left: 0px;
+}
+#orders {
+    margin-right: 0px;
+}
+ul{
+    list-style-type: none;
+}
+#submit {
+    background-color: #17495e;
+    color: white;
+    padding: 10px 15px;
+    border: solid 0px;
+    border-radius: 25px;
+    margin: 15px;
+    margin-left: 50px;
+}
+#submit:disabled{
+    background-color: teal;
+}
+#meals-list li {
+    cursor: pointer;
+}
+
+.selected{
+    background-color: #eee;
+}

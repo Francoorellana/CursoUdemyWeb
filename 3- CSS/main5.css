@@ -1,0 +1,11 @@
+body{
+    background-color: whitesmoke;
+}
+.grid{
+    display: grid;
+    width: 100%;
+    height: 100%;
+    grid-template-rows: 50px 1fr 2fr 2fr;
+    
+}
+

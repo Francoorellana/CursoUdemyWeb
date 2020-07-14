@@ -1,0 +1,40 @@
+body{
+    background-color: skyblue;
+}
+ul{
+    background-color: black;
+    list-style-type: none;
+    margin:0;
+    padding: 0;
+    overflow: hidden;
+    position: fixed;
+    border: 0;
+    top:0;
+    left:0;    
+    width: 100%;
+}
+li{
+    float: left;    
+}
+li a {
+    display: block;
+    color: whitesmoke;
+    text-align: center;
+    padding: 25px;
+    text-decoration: none;
+}
+li:hover{
+    background-color: rgba(0,0,0,0.1);
+}
+.active{
+    background-color: black;
+}
+
+.content{
+    padding: 50px;
+}
+
+
+
+
+
