@@ -1,4 +1,5 @@
 let mealsState = []
+let ruta = "orders" //registro, orders, 
 
 
 const stringToHTML = (s) => {
@@ -42,7 +43,7 @@ const inicializaFormulario = () => {
         }
         const order = {
             meal_id: mealIdValue,
-            user_id: "chanchitofeliz",
+            user_id: "chanchito triste",
         }
 
         fetch("https://java1-indol.vercel.app/api/orders", {
@@ -83,12 +84,42 @@ const inicializaDatos = () => {
         })
 }
 
+const renderApp = () => {
+    const token = localStorage.getItem("token")
+    if(token){
+        const ordersView = document.getElementById("orders-view")
+        document.getElementsByTagName("body")[0].innerHTML = ordersView.innerHTML
+    }
+    console.log("token", token)
+}
+
 window.onload = () => {
-    inicializaFormulario()
-    inicializaDatos()
+    renderApp()
+    const loginForm = document.getElementById("login-form")
+    loginForm.onsubmit = (e) => {
+    e.preventDefault()
+    const email = document.getElementById("email").value
+    const password = document.getElementById("password").value
+
+    fetch("https://java1-indol.vercel.app/api/auth/login", {
+     method: "POST",
+     headers: {
+        'Content-Type': 'application/JSON',
+     },
+    body: JSON.stringify({ email , password })
+    }).then(x => x.json())
+        .then(respuesta => {
+            localStorage.setItem("token", respuesta.token)
+            ruta = "orders"
+        })
+    }
 }
 
 
 
-
-
+/*        fetch("https://java1-indol.vercel.app/api/auth/login", {
+         method: "POST",
+         headers: {
+            'Content-Type': 'application/JSON',
+         },
+        body: JSON.stringify({ email: "franco@orellana.com" , password: "1234" })*/

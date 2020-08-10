@@ -1,0 +1,5 @@
+contraseña almuerzimaster
+nPxmLRe6fJWyhtUh
+
+
+mongodb+srv://almuerzimaster:<password>@almuerzidb.r4hhl.mongodb.net/<dbname>?retryWrites=true&w=majority
